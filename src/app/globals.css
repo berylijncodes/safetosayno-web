@@ -19,7 +19,7 @@ body {
 
 body {
   color: var(--foreground);
-  background: #f0eae6;
+  background: #fbf7f4;
   font-family: var(--font-inter), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
