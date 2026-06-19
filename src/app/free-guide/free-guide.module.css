@@ -1,0 +1,689 @@
+/* ─────────────────────────────────────────
+   PAGE SHELL
+───────────────────────────────────────── */
+.page {
+    font-family: var(--font-sans);
+    background: var(--cream);
+    color: var(--espresso);
+  }
+  
+  /* ─────────────────────────────────────────
+     SHARED
+  ───────────────────────────────────────── */
+  .eyebrow,
+  .sectionEyebrow,
+  .ctaEyebrow {
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--blush);
+    display: block;
+    margin-bottom: 0.9rem;
+  }
+  
+  .sectionTitle {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--espresso);
+    line-height: 1.2;
+    margin: 0 0 2.5rem;
+  }
+  
+  .sectionTitle em {
+    font-style: italic;
+    color: var(--blush);
+  }
+  
+  /* ─────────────────────────────────────────
+     HERO
+  ───────────────────────────────────────── */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 580px;
+  }
+  
+  .heroLeft {
+    padding: 5rem 3rem 5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .heroTitle {
+    font-family: var(--font-serif);
+    font-size: 3.6rem;
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--espresso);
+    margin: 0 0 1.2rem;
+  }
+  
+  .heroTitle em {
+    font-style: italic;
+    color: var(--blush);
+  }
+  
+  .heroSub {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--muted);
+    margin: 0 0 2.5rem;
+    max-width: 420px;
+  }
+  
+  /* ── Form ── */
+  .formWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    max-width: 420px;
+  }
+  
+  .formLabel {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted-2);
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  
+  .formRow {
+    display: flex;
+  }
+  
+  .formRowDark {
+    display: flex;
+  }
+  
+  .input {
+    flex: 1;
+    background: var(--cream-2);
+    border: 0.5px solid var(--border-2);
+    border-right: none;
+    color: var(--espresso);
+    padding: 0.85rem 1rem;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  
+  .input:focus {
+    border-color: var(--blush);
+  }
+  
+  .input::placeholder {
+    color: var(--muted-2);
+  }
+  
+  .inputDark {
+    flex: 1;
+    background: rgba(251, 247, 244, 0.08);
+    border: 0.5px solid var(--espresso-3);
+    border-right: none;
+    color: var(--cream-2);
+    padding: 0.85rem 1rem;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  
+  .inputDark:focus {
+    border-color: var(--blush);
+  }
+  
+  .inputDark::placeholder {
+    color: var(--muted-2);
+  }
+  
+  .formBtn {
+    background: var(--blush);
+    color: var(--cream);
+    border: none;
+    padding: 0.85rem 1.4rem;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  
+  .formBtn:hover {
+    background: var(--blush-dark);
+  }
+  
+  .formBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .micro {
+    font-size: 0.62rem;
+    color: var(--muted-2);
+    letter-spacing: 0.04em;
+  }
+  
+  .microDark {
+    font-size: 0.62rem;
+    color: var(--muted-2);
+    letter-spacing: 0.04em;
+  }
+  
+  .errorMsg {
+    font-size: 0.72rem;
+    color: #c0392b;
+  }
+  
+  .successMsg {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 1rem 1.2rem;
+    background: var(--cream-2);
+    border-radius: 8px;
+    border: 0.5px solid var(--border-2);
+  }
+  
+  .successIcon {
+    font-size: 1rem;
+    color: var(--blush);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  
+  .successTitle {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--espresso);
+    margin-bottom: 0.2rem;
+  }
+  
+  .successTitleDark {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--cream-2);
+    margin-bottom: 0.2rem;
+  }
+  
+  .successSub {
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: var(--muted);
+  }
+  
+  .successSubDark {
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: var(--border-2);
+  }
+  
+  /* ── Hero right ── */
+  .heroRight {
+    background: var(--cream-3);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2.5rem;
+  }
+  
+  .orb1 {
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 260px;
+    height: 260px;
+    background: var(--border-2);
+    border-radius: 50%;
+    opacity: 0.4;
+  }
+  
+  .orb2 {
+    position: absolute;
+    bottom: 80px;
+    left: -40px;
+    width: 140px;
+    height: 140px;
+    background: var(--blush);
+    border-radius: 50%;
+    opacity: 0.15;
+  }
+  
+  /* Guide preview card */
+  .guideCard {
+    background: var(--cream);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    width: 88%;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 8px 48px rgba(45, 36, 32, 0.1);
+  }
+  
+  .cardLabel {
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--blush);
+    display: block;
+    margin-bottom: 1.1rem;
+  }
+  
+  .cardTitle {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--espresso);
+    line-height: 1.25;
+    margin: 0 0 0.4rem;
+  }
+  
+  .cardSubtitle {
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: var(--muted-2);
+    font-style: italic;
+    margin: 0 0 1.6rem;
+  }
+  
+  .cardDivider {
+    height: 0.5px;
+    background: var(--border);
+    margin-bottom: 1.4rem;
+  }
+  
+  .cardContents {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  
+  .cardItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  
+  .cardNum {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--border-2);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 22px;
+  }
+  
+  .cardItemTitle {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--espresso);
+    display: block;
+    margin-bottom: 0.15rem;
+  }
+  
+  .cardItemDesc {
+    font-size: 0.68rem;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+  
+  .cardFooter {
+    margin-top: 1.8rem;
+    padding-top: 1.2rem;
+    border-top: 0.5px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  
+  .cardPages {
+    font-size: 0.62rem;
+    color: var(--muted-2);
+    letter-spacing: 0.04em;
+  }
+  
+  .cardFree {
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blush);
+    background: var(--cream-3);
+    padding: 0.25rem 0.7rem;
+    border-radius: 2rem;
+    border: 0.5px solid var(--border-2);
+  }
+  
+  /* ─────────────────────────────────────────
+     WHAT YOU GET
+  ───────────────────────────────────────── */
+  .whatSection {
+    padding: 4.5rem 2.5rem;
+    border-top: 0.5px solid var(--border);
+  }
+  
+  .promisesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+  
+  .promiseCard {
+    padding: 2rem 1.8rem;
+    border: 0.5px solid var(--border);
+    border-radius: 12px;
+    background: var(--cream);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .promiseCard:hover {
+    border-color: var(--border-2);
+    box-shadow: 0 4px 20px rgba(45, 36, 32, 0.06);
+  }
+  
+  .promiseCardDark {
+    background: var(--espresso);
+    border-color: var(--espresso);
+  }
+  
+  .promiseCardDark .promiseNum {
+    color: var(--espresso-3);
+  }
+  
+  .promiseCardDark .promiseTitle {
+    color: var(--cream-2);
+  }
+  
+  .promiseCardDark .promiseDesc {
+    color: var(--muted-2);
+  }
+  
+  .promiseNum {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--border);
+    line-height: 1;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  
+  .promiseTitle {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--espresso);
+    margin: 0 0 0.6rem;
+    line-height: 1.2;
+  }
+  
+  .promiseDesc {
+    font-size: 0.78rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 0;
+  }
+  
+  /* ─────────────────────────────────────────
+     WHO THIS IS FOR
+  ───────────────────────────────────────── */
+  .forSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 0.5px solid var(--border);
+  }
+  
+  .forLeft {
+    padding: 4rem 3rem 4rem 2.5rem;
+    border-right: 0.5px solid var(--border);
+  }
+  
+  .forTitle {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--espresso);
+    line-height: 1.2;
+    margin: 0 0 2rem;
+  }
+  
+  .forTitle em {
+    font-style: italic;
+    color: var(--blush);
+  }
+  
+  .forList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .forItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  
+  .forDot {
+    width: 5px;
+    height: 5px;
+    background: var(--blush);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.55em;
+  }
+  
+  .forText {
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+  
+  /* Beryl quote */
+  .forRight {
+    padding: 4rem 2.5rem 4rem 3rem;
+    background: var(--cream-2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .berylQuote {
+    margin-bottom: 2rem;
+  }
+  
+  .bqLabel {
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--blush);
+    display: block;
+    margin-bottom: 0.9rem;
+  }
+  
+  .bqText {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.55;
+    color: var(--espresso);
+    position: relative;
+    padding-left: 1.2rem;
+    margin: 0;
+  }
+  
+  .bqText::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    width: 3px;
+    height: calc(100% - 0.4em);
+    background: var(--blush);
+    border-radius: 2px;
+  }
+  
+  .berylRow {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .berylAvatar {
+    width: 40px;
+    height: 40px;
+    background: var(--blush);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--cream);
+    flex-shrink: 0;
+  }
+  
+  .berylName {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--espresso);
+    display: block;
+  }
+  
+  .berylSite {
+    font-size: 0.65rem;
+    color: var(--muted-2);
+  }
+  
+  /* ─────────────────────────────────────────
+     FINAL CTA
+  ───────────────────────────────────────── */
+  .finalCta {
+    padding: 5rem 2.5rem;
+    text-align: center;
+    background: var(--espresso);
+    border-top: 0.5px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ctaTitle {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--cream-2);
+    line-height: 1.15;
+    margin: 0 0 0.9rem;
+  }
+  
+  .ctaTitle em {
+    font-style: italic;
+    color: var(--blush);
+  }
+  
+  .ctaSub {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--muted-2);
+    max-width: 420px;
+    line-height: 1.75;
+    margin: 0 auto 2.5rem;
+  }
+  
+  /* override form styles inside dark CTA */
+  .finalCta .form {
+    align-items: center;
+    width: 100%;
+    max-width: 440px;
+  }
+  
+  .finalCta .successMsg {
+    background: rgba(251, 247, 244, 0.08);
+    border-color: var(--espresso-3);
+  }
+  
+  /* ─────────────────────────────────────────
+     RESPONSIVE
+  ───────────────────────────────────────── */
+  @media (max-width: 1024px) {
+    .heroTitle {
+      font-size: 2.8rem;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .hero,
+    .forSection {
+      grid-template-columns: 1fr;
+    }
+  
+    .heroLeft {
+      padding: 3.5rem 1.25rem;
+    }
+  
+    .heroRight {
+      min-height: 400px;
+      padding: 2.5rem 1.5rem;
+    }
+  
+    .forLeft {
+      border-right: none;
+      padding: 3rem 1.25rem;
+    }
+  
+    .forRight {
+      padding: 3rem 1.25rem;
+    }
+  
+    .promisesGrid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .heroTitle {
+      font-size: 2.2rem;
+    }
+  
+    .whatSection {
+      padding: 3rem 1.25rem;
+    }
+  
+    .finalCta {
+      padding: 3.5rem 1.25rem;
+    }
+  
+    .ctaTitle {
+      font-size: 2.2rem;
+    }
+  
+    .promisesGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .guideCard {
+      width: 95%;
+      padding: 2rem 1.5rem;
+    }
+  }
+  
