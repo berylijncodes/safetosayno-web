@@ -26,7 +26,7 @@ export default function Footer({ hideNewsletter = false }: { hideNewsletter?: bo
   return (
       <footer id="newsletter" className={styles.footer}>
         <div className={styles.footerTop}>
-          <div className={styles.footerBrand}>
+          <div>
             <span className={styles.footerLogo}>safe to say no</span>
             <p className={styles.footerTagline}>
               A gentle corner of the internet for people learning that their no
